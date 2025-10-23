@@ -15,7 +15,7 @@ public class AttrifyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        AttrifyConfig config = new AttrifyConfig.Builder("<YOUR_MEASUREMENT_ID>")
+        AttrifyConfig config = new AttrifyConfig.Builder(BuildConfig.MEASUREMENT_ID)
             // Attrify only collects sensitive data if all consent settings (ccpa, coppa, gdpr) are true.
             // The default is **true** for all consent settings, you can set them to false if needed.
             // .setConsentCcpa(false)

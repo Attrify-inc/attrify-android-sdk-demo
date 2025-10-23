@@ -14,7 +14,7 @@ private const val TAG = "AttrifyApp"
 class AttrifyApp : Application() {
     override fun onCreate() {
         super.onCreate()
-        val config = AttrifyConfig.Builder("<YOUR_MEASUREMENT_ID>")
+        val config = AttrifyConfig.Builder(BuildConfig.MEASUREMENT_ID)
             // Attrify only collects sensitive data if all consent settings (ccpa, coppa, gdpr) are true.
             // The default is **true** for all consent settings, you can set them to false if needed.
             // .setConsentCcpa(false)
