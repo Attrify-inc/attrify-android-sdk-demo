@@ -28,11 +28,11 @@ class AttrifyApp : Application() {
             // You can filter the log by tag prefix "Attrify_".
             .setDebugMode(true)
             .setEventTrackingListener(object : OnEventTrackingListener {
-                override fun onEventTrackingFailed(data: AttrifyEventFailure) {
+                override fun onEventTrackingFailure(data: AttrifyEventFailure) {
                     Log.e(TAG, "Event: ${data.eventName}, callbackId: ${data.callbackId} tracking failed: ${data.message}, will retry: ${data.willRetry}.", data.cause)
                 }
 
-                override fun onEventTrackingSucceeded(data: AttrifyEventSuccess) {
+                override fun onEventTrackingSuccess(data: AttrifyEventSuccess) {
                     Log.i(TAG, "Event: ${data.eventName}, callbackId: ${data.callbackId} tracking succeeded.")
                 }
             })

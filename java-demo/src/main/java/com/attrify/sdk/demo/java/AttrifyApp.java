@@ -30,12 +30,12 @@ public class AttrifyApp extends Application {
             .setDebugMode(true)
             .setEventTrackingListener(new OnEventTrackingListener() {
                 @Override
-                public void onEventTrackingFailed(AttrifyEventFailure data) {
+                public void onEventTrackingFailure(AttrifyEventFailure data) {
                     Log.e(TAG, "Event: " + data.eventName + ", callbackId: " + data.callbackId + " tracking failed: " + data.message + ", will retry: " + data.willRetry + ".", data.cause);
                 }
 
                 @Override
-                public void onEventTrackingSucceeded(AttrifyEventSuccess data) {
+                public void onEventTrackingSuccess(AttrifyEventSuccess data) {
                     Log.i(TAG, "Event: " + data.eventName + ", callbackId: " + data.callbackId + " tracking succeeded.");
                 }
             })
